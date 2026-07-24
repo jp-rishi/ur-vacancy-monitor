@@ -1,0 +1,45 @@
+name: UR vacancy watch
+
+on:
+# Every 10 min (public repo = unlimited Actions minutes). GitHub cron is
+# best-effort and can run late under load (see README).
+    schedule:
+    - cron: "*/10 * * * *"
+    workflow_dispatch: {} # lets you run it manually from the Actions tab
+
+# Only one run at a time; don't stack up if a run is slow.
+concurrency:
+  group: ur-watch
+  cancel-in-progress: false
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # Carry the "already alerted" list forward between runs (no commits).
+      - name: Restore state
+        uses: actions/cache/restore@v4
+        with:
+          path: state.json
+          key: ur-state-${{ github.run_id }}
+          restore-keys: ur-state-
+
+      - name: Check UR vacancies
+        env:
+          # Set this repo secret so the topic stays out of the committed files.
+          # If unset, the topic in config.json is used instead.
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+        run: python3 ur_watch.py
+
+      - name: Save state
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: state.json
+          key: ur-state-${{ github.run_id }}
