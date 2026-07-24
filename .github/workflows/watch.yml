@@ -1,11 +1,11 @@
 name: UR vacancy watch
 
 on:
-# Every 10 min (public repo = unlimited Actions minutes). GitHub cron is
-# best-effort and can run late under load (see README).
-    schedule:
+  # Every 10 min (public repo = unlimited Actions minutes). GitHub cron is
+  # best-effort and can run late under load (see README).
+  schedule:
     - cron: "*/10 * * * *"
-    workflow_dispatch: {} # lets you run it manually from the Actions tab
+  workflow_dispatch: {} # lets you run it manually from the Actions tab
 
 # Only one run at a time; don't stack up if a run is slow.
 concurrency:
