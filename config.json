@@ -1,0 +1,135 @@
+{
+  "filters": {
+    "max_total_rent": 130000,
+    "min_floor": 10,
+    "min_floorspace": 0,
+    "allowed_types": []
+  },
+  "poll_interval_minutes": 15,
+  "open_browser_on_match": false,
+  "alert_sound": "Glass",
+  "priority_alert_sound": "Sosumi",
+  "push": {
+    "enabled": true,
+    "ntfy": {
+      "server": "https://ntfy.sh",
+      "topic": ""
+    },
+    "pushover": {
+      "token": "",
+      "user": ""
+    },
+    "telegram": {
+      "bot_token": "",
+      "chat_id": ""
+    },
+    "webhook": {
+      "url": ""
+    }
+  },
+  "properties": [
+    {
+      "name": "さざなみプラザ (main)",
+      "url": "https://www.ur-net.go.jp/chintai/kansai/osaka/80_2920.html",
+      "shisya": "80",
+      "danchi": "292",
+      "shikibetu": "0",
+      "view_buildings": ["21", "22"],
+      "priority_buildings": ["22"]
+    },
+    {
+      "name": "さざなみプラザ第2",
+      "url": "https://www.ur-net.go.jp/chintai/kansai/osaka/80_3000.html",
+      "shisya": "80",
+      "danchi": "300",
+      "shikibetu": "0"
+    },
+    {
+      "name": "さざなみプラザ第3",
+      "url": "https://www.ur-net.go.jp/chintai/kansai/osaka/80_3040.html",
+      "shisya": "80",
+      "danchi": "304",
+      "shikibetu": "0",
+      "view_buildings": ["21", "22"],
+      "priority_buildings": ["21"]
+    },
+    {
+      "name": "さざなみプラザ第5",
+      "url": "https://www.ur-net.go.jp/chintai/kansai/osaka/80_3230.html",
+      "shisya": "80",
+      "danchi": "323",
+      "shikibetu": "0",
+      "view_buildings": ["31"]
+    },
+    {
+      "name": "さざなみプラザ第6",
+      "url": "https://www.ur-net.go.jp/chintai/kansai/osaka/80_3540.html",
+      "shisya": "80",
+      "danchi": "354",
+      "shikibetu": "0",
+      "view_buildings": ["32"],
+      "priority_buildings": ["32"]
+    },
+    {
+      "name": "さざなみプラザ第7",
+      "url": "https://www.ur-net.go.jp/chintai/kansai/osaka/80_3400.html",
+      "shisya": "80",
+      "danchi": "340",
+      "shikibetu": "0"
+    },
+    {
+      "name": "さざなみプラザ第8",
+      "url": "https://www.ur-net.go.jp/chintai/kansai/osaka/80_3600.html",
+      "shisya": "80",
+      "danchi": "360",
+      "shikibetu": "0",
+      "view_buildings": ["36"]
+    },
+    {
+      "name": "リバーサイドながら",
+      "url": "https://www.ur-net.go.jp/chintai/kansai/osaka/80_2550.html",
+      "shisya": "80",
+      "danchi": "255",
+      "shikibetu": "0",
+      "view_buildings": ["1", "2", "3", "4"],
+      "priority_buildings": ["3"]
+    },
+    {
+      "name": "リバーサイドほんじょう",
+      "url": "https://www.ur-net.go.jp/chintai/kansai/osaka/80_2790.html",
+      "shisya": "80",
+      "danchi": "279",
+      "shikibetu": "0",
+      "view_buildings": ["1"]
+    },
+    {
+      "name": "リバーサイドしろきた",
+      "url": "https://www.ur-net.go.jp/chintai/kansai/osaka/80_2630.html",
+      "shisya": "80",
+      "danchi": "263",
+      "shikibetu": "0",
+      "exclude_buildings": ["32", "33", "36"]
+    },
+    {
+      "name": "都島リバーシティ",
+      "url": "https://www.ur-net.go.jp/chintai/kansai/osaka/80_3830.html",
+      "shisya": "80",
+      "danchi": "383",
+      "shikibetu": "0"
+    },
+    {
+      "name": "桜宮リバーシティ中央",
+      "url": "https://www.ur-net.go.jp/chintai/kansai/osaka/80_3560.html",
+      "shisya": "80",
+      "danchi": "356",
+      "shikibetu": "0"
+    },
+    {
+      "name": "リバーサイドともぶち第2",
+      "url": "https://www.ur-net.go.jp/chintai/kansai/osaka/80_3030.html",
+      "shisya": "80",
+      "danchi": "303",
+      "shikibetu": "0"
+    }
+  ]
+}
