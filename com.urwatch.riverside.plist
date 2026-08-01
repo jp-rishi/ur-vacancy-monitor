@@ -8,7 +8,7 @@
     <key>ProgramArguments</key>
     <array>
         <string>/usr/local/bin/python3</string>
-        <string>/Users/rishibodke/Develop/personal/ur-vacancy-monitor/ur_watch.py</string>
+        <string>/Users/isshin/workspace/develop/ur-vacancy-monitor/ur_watch.py</string>
     </array>
 
     <!-- Re-check every 15 minutes (900 seconds). -->
@@ -20,11 +20,11 @@
     <true/>
 
     <key>WorkingDirectory</key>
-    <string>/Users/rishibodke/Develop/personal/ur-vacancy-monitor</string>
+    <string>/Users/isshin/workspace/develop/ur-vacancy-monitor</string>
 
     <key>StandardOutPath</key>
-    <string>/Users/rishibodke/Develop/personal/ur-vacancy-monitor/run.log</string>
+    <string>/Users/isshin/workspace/develop/ur-vacancy-monitor/run.log</string>
     <key>StandardErrorPath</key>
-    <string>/Users/rishibodke/Develop/personal/ur-vacancy-monitor/run.log</string>
+    <string>/Users/isshin/workspace/develop/ur-vacancy-monitor/run.log</string>
 </dict>
 </plist>
