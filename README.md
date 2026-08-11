@@ -8,8 +8,10 @@ requirements opens up. Pure Python standard library — nothing to install.
 
 All the riverside properties along the Yodogawa / Ōkawa:
 
-- さざなみプラザ (main, 第2, 第3, 第6, 第7, 第8) — on the Ōkawa
-- リバーサイドながら
+- さざなみプラザ (第1, 第2, 第3, 第5) on the Okawa
+
+## Extendable to the below as well
+- リバーサイドながら (3号棟, ４号棟)
 - リバーサイドしろきた
 - 都島リバーシティ
 - 桜宮リバーシティ中央
@@ -84,20 +86,14 @@ properties are left fully open.
 |---|---|---|
 | リバーサイドながら | allow 1·2·3·4; ⭐**3** at edge | [O] |
 | リバーサイドほんじょう | allow 1 (higher floors) | [O] |
-| さざなみプラザ (main) | allow 21·22; ⭐**22** at edge | [O] |
+| さざなみプラザ第1 | allow 21·22; ⭐**22** at edge | [O] |
+| さざなみプラザ第2 | allow 24; ⭐**24** river view | [O] |
 | さざなみプラザ第3 | allow 21·22; ⭐**21** at edge | [O] |
-| さざなみプラザ第6 | allow 32; ⭐**32** on the river edge (best of 5/6 pair) | [O] |
-| さざなみプラザ第5 | allow 31 (faces 大川 but set back; weaker than 32) | [O] |
-| さざなみプラザ第8 | allow 36 (higher floors, unconfirmed) | [O] |
-| さざなみプラザ第7 | loose (owner: inland; research: 28号棟 east balcony over 大川) | [O]/[R] |
+| さざなみプラザ第5 | allow 31 | [O] |
 | リバーサイドしろきた | block 32·33·36 (courtyard / face Umeda) | [R] |
-| さざなみプラザ第2 | loose (undetermined) | — |
 | 都島リバーシティ | loose (12·13 front the riverpark, [R] HIGH) | [R] |
 | 桜宮リバーシティ中央 | loose (all units 南向き; undetermined) | [R] |
 | リバーサイドともぶち第2 | loose (buildings face E/SE/S, away from 大川) | [R] |
-
-Not monitorable (not UR): 桜宮リバーシティ**ウエスト** (分譲マンション, 23F/199戸);
-"Sakura 第2 コーポ" (unidentified — provide exact name/address to check).
 
 The dashboard's **Bldg** column shows each room's 号棟 so you can sanity-check.
 

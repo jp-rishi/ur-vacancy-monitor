@@ -54,6 +54,14 @@
       "view_buildings": ["21", "22"],
       "priority_buildings": ["21"]
     },
+        {
+      "name": "さざなみプラザ第4",
+      "url": "https://www.ur-net.go.jp/chintai/kansai/osaka/80_3250.html",
+      "shisya": "80",
+      "danchi": "325",
+      "shikibetu": "0",
+      "view_buildings": ["26"]
+    },
     {
       "name": "さざなみプラザ第5",
       "url": "https://www.ur-net.go.jp/chintai/kansai/osaka/80_3230.html",
