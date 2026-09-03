@@ -1,6 +1,6 @@
 {
   "filters": {
-    "max_total_rent": 110000,
+    "max_total_rent": 130000,
     "min_floor": 10,
     "min_floorspace": 0,
     "allowed_types": []
