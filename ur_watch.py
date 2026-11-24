@@ -322,7 +322,10 @@ def log_match(r):
 def run_once(config, *, test=False, show_all=False):
     f = config["filters"]
     seen = set() if test else load_state()
-    new_seen = set(seen)
+    # Only matching rooms that are listed right now are remembered, so a room
+    # that leaves the listing and comes back later alerts again.
+    new_seen = set()
+    fetch_failed = False
     new_matches = []
     total_open = 0
 
@@ -331,6 +334,7 @@ def run_once(config, *, test=False, show_all=False):
             rooms = fetch_rooms(prop)
         except Exception as exc:  # network hiccup — skip this property this pass
             print(f"  ! {prop['name']}: fetch failed ({exc})", file=sys.stderr)
+            fetch_failed = True
             continue
 
         total_open += len(rooms)
@@ -343,10 +347,10 @@ def run_once(config, *, test=False, show_all=False):
                       f"{room['type']} {room['floor']}F ¥{room['total']:,}")
             if not hit:
                 continue
+            new_seen.add(room["id"])
             if room["id"] in seen:
                 continue
             new_matches.append(room)
-            new_seen.add(room["id"])
 
     stamp = datetime.now().strftime("%H:%M:%S")
     if new_matches:
@@ -366,6 +370,10 @@ def run_once(config, *, test=False, show_all=False):
         print(f"[{stamp}] no new matches "
               f"({total_open} room(s) currently open across watched properties)")
 
+    if fetch_failed:
+        # A property we couldn't read may still have its rooms listed; keep the
+        # old IDs so a temporary failure doesn't cause duplicate alerts later.
+        new_seen |= seen
     if not test:
         save_state(new_seen)
     return new_matches

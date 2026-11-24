@@ -178,9 +178,11 @@ can also trigger a run manually with **Run workflow**).
 - **Delays.** GitHub's scheduled runs are best-effort and can be late under load,
   so effective polling may be slower than 10 min. Fine for apartment hunting.
 - **Auto-disable.** GitHub disables scheduled workflows after **60 days** with no
-  repo activity. Push any commit (or click Run workflow) to keep it alive.
+  repo activity. The `keepalive` job re-enables the workflow on every scheduled
+  run to prevent this; if it ever shows as disabled, enable it on the Actions tab.
 - **State.** The "already alerted" list is carried between runs via Actions cache,
-  so you're not re-notified about the same room.
+  so you're not re-notified about a room while it stays listed. Once a room drops
+  off the listing it's forgotten, so if it's listed again later you get a new alert.
 
 Run this *or* the local launchd job — not both, or you'll get duplicate alerts.
 For a **local** run to still push to your phone (config topic is now blank),
@@ -209,7 +211,7 @@ Edit **`config.json`**:
 |---|---|
 | `ur_watch.py` | The monitor |
 | `config.json` | Your properties + filters |
-| `state.json` | Room IDs already alerted on (auto-created; delete to reset) |
+| `state.json` | Matching rooms currently listed and already alerted on (auto-created; delete to reset) |
 | `matches.log` | Append-only log of every match found |
 | `run.log` | Output of scheduled launchd runs |
 
