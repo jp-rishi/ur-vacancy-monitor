@@ -43,3 +43,17 @@ jobs:
         with:
           path: state.json
           key: ur-state-${{ github.run_id }}
+
+  # GitHub disables scheduled workflows in public repos after 60 days with no
+  # repo activity (this happened on 2026-11-02). Re-enabling the workflow via
+  # the API on each scheduled run keeps that from happening, without commits.
+  keepalive:
+    if: github.event_name == 'schedule'
+    runs-on: ubuntu-latest
+    permissions:
+      actions: write
+    steps:
+      - name: Re-enable this workflow
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api -X PUT "repos/${{ github.repository }}/actions/workflows/watch.yml/enable"
