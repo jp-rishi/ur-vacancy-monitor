@@ -60,7 +60,7 @@
       "shisya": "80",
       "danchi": "325",
       "shikibetu": "0",
-      "view_buildings": ["26"]
+      "view_buildings": []
     },
     {
       "name": "さざなみプラザ第5",
@@ -68,7 +68,15 @@
       "shisya": "80",
       "danchi": "323",
       "shikibetu": "0",
-      "view_buildings": ["31"]
+      "view_buildings": []
+    },
+    {
+      "name": "リバーサイドながら",
+      "url": "https://www.ur-net.go.jp/chintai/kansai/osaka/80_2550.html",
+      "shisya": "80",
+      "danchi": "255",
+      "shikibetu": "0",
+      "view_buildings": ["3"]
     }
   ]
 }
