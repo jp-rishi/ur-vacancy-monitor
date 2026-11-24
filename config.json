@@ -1,7 +1,7 @@
 {
   "filters": {
-    "max_total_rent": 130000,
-    "min_floor": 10,
+    "max_total_rent": 140000,
+    "min_floor": 0,
     "min_floorspace": 0,
     "allowed_types": []
   },
@@ -34,7 +34,7 @@
       "shisya": "80",
       "danchi": "292",
       "shikibetu": "0",
-      "view_buildings": ["21", "22", "23"],
+      "view_buildings": ["21", "22", "23", "24"],
       "priority_buildings": ["21"]
     },
     {
